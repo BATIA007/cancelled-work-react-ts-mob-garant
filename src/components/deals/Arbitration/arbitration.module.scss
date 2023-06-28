@@ -1,0 +1,29 @@
+.arbitr {
+  background: linear-gradient(
+    #07010e 20%,
+    #190739 60%,
+    #07010e 120%
+  ) !important;
+  padding-bottom: 70px;
+
+  &__wrapper {
+    height: auto;
+  }
+}
+
+.radio {
+  &__title {
+    display: inline-block;
+    color: #eae5f0;
+    font-weight: 800;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+    margin-bottom: 24px;
+  }
+}

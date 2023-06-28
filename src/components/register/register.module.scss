@@ -1,0 +1,241 @@
+.register {
+  background: linear-gradient(1.19deg, #07010e 17.12%, rgba(7, 1, 14, 0) 95.94%),
+    url("../../assets/images/register/bg.png") no-repeat 64% center !important;
+  background-size: cover !important;
+  height: 100%;
+
+  &__wrapper {
+    height: 100%;
+  }
+
+  &__center {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__title {
+    margin-bottom: 7px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 15.6px;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  &__button {
+    position: fixed;
+    left: 4%;
+    right: 4%;
+    width: 92%;
+    bottom: 30px;
+  }
+}
+
+.login {
+  &__wrapper {
+    padding-top: 14px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    color: #7d7a83;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+  }
+
+  &__fieldset {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 8px;
+    align-items: start;
+  }
+
+  &__input_container,
+  &__select_container {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    height: 56px;
+    padding: 0 14px 0 12px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__select_container {
+    overflow: visible;
+    padding: 0;
+    transition: 0.3s;
+
+    .login__input_info {
+      margin-left: 12px;
+    }
+  }
+
+  &__select {
+    position: relative;
+
+    .login__option:last-child {
+      border-radius: 0 0 12px 12px;
+    }
+
+    &_active {
+      border-radius: 12px 12px 0 0;
+
+      .login__option:not(.login__option_active) {
+        opacity: 1;
+        pointer-events: visible;
+
+        &:active {
+          background: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+
+  &__option {
+    font-size: 18px;
+    @media screen and (max-width: 350px) {
+      font-size: 14px;
+      transform: translateY(14px);
+    }
+    line-height: 1.2;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.12);
+    height: 56px;
+    width: 100%;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transform: translateY(9px);
+    opacity: 0;
+    transition: opacity 0.3s, background 0.05s;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &__option_active {
+    pointer-events: visible;
+    position: static;
+    display: block;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    transform: translateY(0);
+    opacity: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 3px;
+      top: 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__input_info {
+    display: block;
+    font-size: 10px;
+    color: #7d7a83;
+    margin-top: 8px;
+    margin-bottom: 3px;
+  }
+
+  &__number {
+    width: 100%;
+    background: transparent;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 800;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.2);
+      transition: 0.2s;
+    }
+
+    &:focus::placeholder,
+    &:active::placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+.checking {
+  &__wrapper {
+    padding-top: 14px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    color: #7d7a83;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 100px;
+  }
+
+  &__group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  &__input_container {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__input {
+    width: 20px;
+    background: transparent;
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__more {
+    position: fixed;
+    left: 4%;
+    right: 4%;
+    width: 92%;
+    bottom: 30px;
+    text-align: center;
+    color: #7d7a83;
+  }
+
+  &__span {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 800;
+    user-select: none;
+    transition: 0.15s;
+    &:active {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}

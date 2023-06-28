@@ -1,0 +1,237 @@
+.stats {
+  padding-bottom: 70px;
+
+  &__wrapper {
+    height: auto;
+  }
+
+  &__tabs {
+    display: flex;
+    margin-bottom: 12px;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      height: 0;
+      width: 0;
+      display: none;
+    }
+
+    .stats__tab:first-child {
+      margin-left: 4vw;
+    }
+
+    .stats__tab:last-child {
+      margin-right: 4vw;
+    }
+  }
+
+  &__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0 16px;
+    line-height: 1.4;
+    margin-right: 10px;
+    white-space: nowrap;
+    height: 36px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &_active {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__tab_icon {
+    margin-right: 10px;
+  }
+}
+
+.chart {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: 16px;
+  margin-bottom: 8px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__left {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &__numbers {
+    font-weight: 800;
+    font-size: 28px;
+  }
+
+  &__text {
+    color: #7d7a83;
+    line-height: 1.2;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #7037e5 0%, #9b58ee 100%);
+    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    transition: 0.05s;
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__bottom {
+    margin-top: 20px;
+    display: flex;
+  }
+
+  &__deposit,
+  &__withdraw {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 24px;
+  }
+
+  &__line {
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(180deg, #33d373 0%, #24a797 100%);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    &_purple {
+      background: linear-gradient(90deg, #7037e5 0%, #9b58ee 100%);
+    }
+  }
+
+  &__sum_text {
+    font-size: 12px;
+    color: #7d7a83;
+  }
+
+  &__sum_value {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+.block {
+  &__title {
+    font-weight: 800;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+
+  &__link {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 11px 12px;
+  }
+
+  &__left {
+    display: flex;
+  }
+
+  &__grid {
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    color: #7d7a83;
+    line-height: 1.25;
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    padding-left: 24px;
+  }
+
+  &__value {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.2;
+    background-color: #33d373;
+    background-image: linear-gradient(-90deg, #33d373, #24a797);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &_purple {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 1.2;
+      color: #b081eb;
+    }
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 8px;
+
+  &__item {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 12px;
+    display: flex;
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(90deg, #7037e5 0%, #9b58ee 100%);
+    border-radius: 12px;
+  }
+
+  &__info {
+    font-size: 12px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 4px;
+  }
+
+  &__value {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}

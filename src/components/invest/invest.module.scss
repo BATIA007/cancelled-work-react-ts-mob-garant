@@ -1,0 +1,55 @@
+.invest {
+  &__wrapper {
+    padding-top: 24px;
+    height: auto;
+    overflow: visible;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+}
+
+.nav {
+  padding-bottom: 24px;
+  &__list {
+    overflow-x: scroll;
+    display: flex;
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+      height: 0;
+      width: 0;
+    }
+
+    .nav__link:first-child {
+      margin-left: 4vw;
+    }
+
+    .nav__link:last-child {
+      margin-right: 4vw;
+    }
+  }
+
+  &__link {
+    margin-right: 24px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    padding: 0 18px;
+    height: 42px;
+    white-space: nowrap;
+    color: #fff;
+  }
+
+  &__item_active {
+    background: linear-gradient(90deg, #7037e5 0%, #9b58ee 100%);
+  }
+}
