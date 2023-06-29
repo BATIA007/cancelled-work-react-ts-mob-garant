@@ -201,7 +201,7 @@ export const Register3: React.FC = () => {
         <p className={styles.checking__more}>
           Не пришел код?{" "}
           <Link to="/profile">
-            <span className={styles.checking__span}>Отправить заново</span>
+            <span className={styles.checking__span}>Переход в профиль</span>
           </Link>
         </p>
       </div>
